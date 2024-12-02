@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <form id="bmiForm">
+      <label for="unitSelection">Choose Units:</label>
+      <select id="unitSelection">
+        <option value="" selected>Select metrics</option>
+        <option value="metric">Metric Units(cm and kg)</option>
+        <option value="imperial">US Units(ft and lbs)</option>
+      </select>
+      
+      <div id="metricInputs" style="display: none;">
+        <label for="heightCm">Height (cm):</label>
+        <input type="number" id="heightCm" placeholder="Enter height in cm" />
+        <label for="weightKg">Weight (kg):</label>
+        <input type="number" id="weightKg" placeholder="Enter weight in kg" />
+      </div>
+      
+      <div id="imperialInputs" style="display: none;">
+        <label for="heightFeet">Height (feet):</label>
+        <input type="number" id="heightFeet" placeholder="Feet" />
+        <label for="heightInches">Height (inches):</label>
+        <input type="number" id="heightInches" placeholder="Inches" />
+        <label for="weightLbs">Weight (lbs):</label>
+        <input type="number" id="weightLbs" placeholder="Enter weight in lbs" />
+      </div>
+      
+      <button id="calculateBtn" type = "submit">Calculate BMI</button>
+      <p id="result"></p>
+      
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
